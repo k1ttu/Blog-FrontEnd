@@ -29,9 +29,8 @@
   justify-content: start;
 }
 .post-image {
-  width: max-content;
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 130px;
+  max-height: 130px;
   width: auto;
   height: 100%;
 }
