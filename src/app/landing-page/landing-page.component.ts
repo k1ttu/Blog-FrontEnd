@@ -22,12 +22,13 @@ export class LandingPageComponent {
 
   ngOnInit(): void {
     this.fetchData();
+
   }
 
   fetchData():void{
     this.apiData.getBlogs().subscribe({
       next: (response:any ) => {
-        if( this.index < 5 ){
+        if( this.index < 4 ){
 
           this.posts = response.map((blog :Blogpost ) => ({
             _id:blog._id,
@@ -39,6 +40,7 @@ export class LandingPageComponent {
             images: blog.images ,
             preview: blog.preview
           }))
+          this.posts.reverse();
           this.index += 1;
         }
       },
@@ -46,6 +48,5 @@ export class LandingPageComponent {
         console.log("error fetching data : " + err);
       }
   });
-
   }
 }

@@ -32,6 +32,7 @@ export class BlogsPageComponent {
             images: blog.images ,
             preview: blog.preview
           }))
+          this.posts.reverse();
         },
         error:(err) => {
           console.log("error fetching data : " + err);
