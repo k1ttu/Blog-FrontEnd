@@ -1,0 +1,23 @@
+<main>
+  <app-page-heading title="My Blog" />
+  <div class="yapping-container">
+    <p class="yapping">
+      I'm not a professional or an experienced writer but I like to write poems,
+      about my life or about stuff that I find interesting. I also write short
+      write-ups about my personal philosophies that I usually come up with after
+      4th joint (for legal reasons, that's a joke).
+    </p>
+    <p class="yapping">
+      If you like to read, consider going through my posts and let me
+      know what your think, you can mail me directly or just hit me up on one of
+      my socials.
+    </p>
+  </div>
+  <div class="posts">
+    <ul class="posts-table">
+      @for (post of posts; track post._id) {
+        <app-blog-preview [blog]="post"></app-blog-preview>
+      }
+    </ul>
+  </div>
+</main>

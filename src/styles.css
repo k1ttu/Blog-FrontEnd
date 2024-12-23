@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --divider-color:rgb(226,	218,	207);
+  --text-primary:rgb(31 41 55 );
+  background-color: rgb(246,	238,	227);
+  padding: 10px 20px;
+  --h1-size: 3rem ;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 100;
+  font-style: var(--text-primary);
+}

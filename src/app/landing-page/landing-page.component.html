@@ -1,0 +1,55 @@
+<div class="main">
+  <section class="posts-section">
+    <div class="posts-section-nav">
+      <app-page-heading title="Recent Posts"></app-page-heading>
+      <div class="nav-button-container">
+        <button class="nav-button">
+          ...
+        </button>
+      </div>
+    </div>
+    <div class="posts">
+      <ul class="posts-table">
+        @for (post of posts; track post._id) {
+          <app-blog-preview [blog]="post"></app-blog-preview>
+        }
+      </ul>
+    </div>
+  </section>
+  <section class="divider"></section>
+  <section class="about-me-section">
+    <img
+      src="assests/Screenshot 2024-12-20 at 3.14.48 AM.png"
+      alt=""
+      class="image"
+      id="profile-pic"
+    />
+    <p class="about-me-description">Hi, I'm Chirag</p>
+    <p class="description">
+      This is my personal blog where I like to share my thoughts once in a while. If you like to read, consider checking them out.
+    </p>
+    <p class="description">
+      I generally write about my perosnal philosophies and sometime poetry. I also post book reviews sometimes.
+    </p>
+    <ul class="links-list">
+      @for (item of [
+        {
+          name:"LinkedIn",
+          link:"https://www.linkedin.com/in/chirag9599/"
+        }
+        ,{
+          name:"Github",
+          link:"https://github.com/k1ttu"
+        },
+        {
+          name:"Portfolio"
+          ,link:"https://portfolio1-iota-lovat.vercel.app/"
+        }
+      ]; track $index) {
+        <a class="links" href={{item.link}}>
+          <span class="arrow">→</span> {{item.name}}
+        </a>
+      }
+    </ul>
+  </section>
+</div>

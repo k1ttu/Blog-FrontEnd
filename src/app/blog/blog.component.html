@@ -1,0 +1,17 @@
+<main>
+  <app-page-heading title={{post.title}}/>
+  <div class="main-content">
+    <p class="date">{{ post.date}}</p>
+    @if (post.coverPic != "" ) {
+      <img class="coverPic" [src]="post.coverPic" alt=""/>
+    }
+
+    <ul class="content">
+      @for (item of post.content; track $index) {
+        <p class="content-item">
+          {{item}}
+        </p>
+      }
+    </ul>
+  </div>
+</main>
